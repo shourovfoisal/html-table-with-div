@@ -7,6 +7,9 @@ function App() {
       <div className="table">
         {tableHeaders.map((header) => (
           <div className="row" key={header.accessorKey}>
+            <div className="cell" key={header.accessorKey}>
+              {header.header}
+            </div>
             {mockDataLong.map((data) => (
               <div className="cell" key={data["date"]}>
                 {data[header.accessorKey as keyof typeof data]}
