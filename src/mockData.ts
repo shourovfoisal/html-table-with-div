@@ -21,7 +21,7 @@ export const tableHeaders = [
   },
 ];
 
-export const mockDataLong = [
+const mockDataLong = [
   {
     date: "2024-01-30",
     roomToSell: 2,
@@ -150,7 +150,7 @@ export const mockDataLong = [
     "Plan 2": 46000,
   },
 ];
-export const mockData = [
+const mockDataShort = [
   {
     date: "2024-01-30",
     roomToSell: 2,
@@ -181,3 +181,6 @@ export const mockData = [
     "Plan 2": 46000,
   },
 ];
+
+// export const mockData = mockDataShort;
+export const mockData = mockDataLong;

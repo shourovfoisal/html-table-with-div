@@ -1,5 +1,5 @@
 import "./App.css";
-import { mockDataLong, tableHeaders } from "./mockData";
+import { mockData, tableHeaders } from "./mockData";
 
 function App() {
   return (
@@ -7,8 +7,8 @@ function App() {
       <div className="table">
         {tableHeaders.map((header) => (
           <div className="row" key={header.accessorKey}>
-            <div className="cell">{header.header}</div>
-            {mockDataLong.map((data) => (
+            <div className="cell headerCell">{header.header}</div>
+            {mockData.map((data) => (
               <div className="cell" key={data["date"]}>
                 {data[header.accessorKey as keyof typeof data]}
               </div>
