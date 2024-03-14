@@ -5,12 +5,13 @@
 }
 
 .tableOuter {
-  padding: 1rem;
+  overflow-x: scroll;
 }
 
 .table {
-  overflow-x: scroll;
   border: 1px solid #555;
+  width: 100%;
+  min-width: fit-content;
 }
 
 .row {
@@ -19,9 +20,10 @@
 }
 
 .cell {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-width: 6rem;
-  padding: 1rem;
   overflow-wrap: break-word;
 
   /**

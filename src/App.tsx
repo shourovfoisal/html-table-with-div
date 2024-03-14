@@ -5,8 +5,12 @@ function App() {
   return (
     <div className="tableOuter">
       <div className="table">
-        {tableHeaders.map((header) => (
-          <div className="row" key={header.accessorKey}>
+        {tableHeaders.map((header, idx, mainArr) => (
+          <div
+            className="row"
+            style={idx === mainArr.length - 1 ? { borderBottom: "none" } : {}}
+            key={header.accessorKey}
+          >
             <div className="cell headerCell">{header.header}</div>
             {mockData.map((data) => (
               <div className="cell" key={data["date"]}>
